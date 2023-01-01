@@ -14,6 +14,6 @@ async function bootstrap() {
       'Origin,X-Requested-With,Content-Type,Accept,Authorization,authorization,X-Forwarded-for',
   });
 
-  await app.listen(7777);
+  await app.listen(process.env.PORT || 7777);
 }
 bootstrap();
