@@ -12,7 +12,7 @@ import {
 } from '@nestjs/websockets';
 import { Server, Socket } from 'socket.io';
 
-@WebSocketGateway(Number(process.env.PORT) || 8888, { cors: '*:*' })
+@WebSocketGateway({ cors: '*:*' })
 export class MessengerGateway
   implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect
 {
